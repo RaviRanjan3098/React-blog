@@ -1,5 +1,4 @@
-// context/BlogContext.js
-import { createContext, useState } from 'react';
+import React, { createContext, useState } from "react";
 
 const BlogContext = createContext();
 
@@ -11,11 +10,13 @@ export const BlogProvider = ({ children }) => {
   };
 
   const updateBlog = (updatedBlog) => {
-    setBlogs(blogs.map(blog => blog.id === updatedBlog.id ? updatedBlog : blog));
+    setBlogs(
+      blogs.map((blog) => (blog.id === updatedBlog.id ? updatedBlog : blog))
+    );
   };
 
   const deleteBlog = (id) => {
-    setBlogs(blogs.filter(blog => blog.id !== id));
+    setBlogs(blogs.filter((blog) => blog.id !== id));
   };
 
   return (

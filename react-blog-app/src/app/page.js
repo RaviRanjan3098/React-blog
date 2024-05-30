@@ -1,20 +1,20 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import Blog from "@/components/blog";
-// import { BlogProvider } from './context/BlogContext';
+import BlogList from "@/components/BlogList";
+import Blog  from  "@/components/blog"
 
-const page = ({ Component, pageProps }) => {
+const page = () => {
   return (
    <>
     <section>
-        <div>
+        {/* <div>
+         <BlogList /> 
+        </div> */}
+         <div>
          <Blog /> 
         </div>
 
-        {/* <BlogProvider>
-      <Component {...pageProps} />
-    </BlogProvider> */}
     </section>
   
    
